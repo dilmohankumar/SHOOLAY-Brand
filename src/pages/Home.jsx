@@ -40,13 +40,13 @@ const Home = () => {
       </div>
 {/* ---------------------3 Product -------------------------- */}
           <div className="flex flex-col m-12  items-revert justify-between">
-          <div className=" grid grid-cols-3 gap-4 p-4  text-center">
+          <div className=" grid grid-cols-4 gap-4 p-4  text-center">
       {products.map((product) => (
         <div key={product.id} className="rounded-[10px] border border:1px solid black flex flex-col items-center p-4 ">
           <img
             src={Men}
             alt={product.title}
-            className="w-40 h-auto object-cover mb-2"
+            className="w-30 h-auto object-cover mb-2"
           />
           <h2 className="text-lg">{product.title}</h2>
 
