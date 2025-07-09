@@ -2,6 +2,7 @@ import React from "react";
 import Logob from "../assets/Logo.png";
 import Person2Icon from "@mui/icons-material/Person2";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
+
 const Home = () => {
   return (
     <div className="">
