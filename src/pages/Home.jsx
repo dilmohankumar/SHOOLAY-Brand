@@ -42,7 +42,7 @@ const Home = () => {
           <div className="flex flex-col m-12  items-revert justify-between">
           <div className=" grid grid-cols-3 gap-4 p-4  text-center">
       {products.map((product) => (
-        <div key={product.id} className="flex flex-col items-center">
+        <div key={product.id} className="rounded-[10px] border border:1px solid black flex flex-col items-center p-4 ">
           <img
             src={Men}
             alt={product.title}
