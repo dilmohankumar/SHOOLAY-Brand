@@ -95,6 +95,37 @@ const Home = () => {
         </Slider>
       </div>
 
+      {/* -------------------------brand logo----------------------------- */}
+      <div className="m-6 sm:m-8 md:m-12">
+        <div className="flex flex-wrap justify-between items-center gap-4">
+          <img
+            src={Ad}
+            alt="ad"
+            className="w-1/2 sm:w-1/3 md:w-1/5 max-w-[120px] h-auto object-contain"
+          />
+          <img
+            src={ba}
+            alt="ba"
+            className="w-1/2 sm:w-1/3 md:w-1/5 max-w-[120px] h-auto object-contain"
+          />
+          <img
+            src={bs}
+            alt="bs"
+            className="w-1/2 sm:w-1/3 md:w-1/5 max-w-[120px] h-auto object-contain"
+          />
+          <img
+            src={c}
+            alt="c"
+            className="w-1/2 sm:w-1/3 md:w-1/5 max-w-[120px] h-auto object-contain"
+          />
+          <img
+            src={nb}
+            alt="nb"
+            className="w-1/2 sm:w-1/3 md:w-1/5 max-w-[120px] h-auto object-contain"
+          />
+        </div>
+      </div>
+
       {/* --------------------trending section------------------ */}
 
       <div>
@@ -129,42 +160,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* -------------------------brand logo----------------------------- */}
-      <div className="m-6 sm:m-8 md:m-12">
-        <div className="flex flex-wrap justify-between items-center gap-4">
-          <img
-            src={Ad}
-            alt="ad"
-            className="w-1/2 sm:w-1/3 md:w-1/5 max-w-[120px] h-auto object-contain"
-          />
-          <img
-            src={ba}
-            alt="ba"
-            className="w-1/2 sm:w-1/3 md:w-1/5 max-w-[120px] h-auto object-contain"
-          />
-          <img
-            src={bs}
-            alt="bs"
-            className="w-1/2 sm:w-1/3 md:w-1/5 max-w-[120px] h-auto object-contain"
-          />
-          <img
-            src={c}
-            alt="c"
-            className="w-1/2 sm:w-1/3 md:w-1/5 max-w-[120px] h-auto object-contain"
-          />
-          <img
-            src={nb}
-            alt="nb"
-            className="w-1/2 sm:w-1/3 md:w-1/5 max-w-[120px] h-auto object-contain"
-          />
-        </div>
-      </div>
-
-      {/* ------------------------------footer-------------------------------- */}
-
-      <div className="m-12">
-        <div>Footer</div>
-      </div>
+   
     </div>
   );
 };
