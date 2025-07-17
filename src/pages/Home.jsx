@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Banner from "../assets/banner1.png";
 import Banner2 from "../assets/banner2.png";
 import Men from "../assets/Men.jpg";
@@ -25,8 +25,18 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Home = () => {
   const banners = [Banner, Banner2];
+  const [visibleCount, setVisibleCount] = useState(10);
   const [products] = useState(productList.products);
   const [Trendproducts] = useState(trendingproductList.trendproducts);
+  const [loading, setLoading] = useState(false);
+
+  const loadMore = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setVisibleCount((prevCount) => prevCount + 5);
+      setLoading(false);
+    }, 500);
+  };
 
   return (
     <div>
@@ -134,8 +144,9 @@ const Home = () => {
             Trending Products
           </h1>
         </div>
+
         <div className="m-12  flex flex-wrap gap-4 min-w-[651px]">
-          {Trendproducts.map((trendproduct) => (
+          {Trendproducts.slice(0, visibleCount).map((trendproduct) => (
             <div key={trendproduct.id} className="p-1 basis-[calc(20%-1rem)]">
               <div className="hover:shadow-md hover:scale-105 transition-transform transition-shadow duration-300 border border-gray-200 w-full">
                 <img
@@ -158,9 +169,40 @@ const Home = () => {
             </div>
           ))}
         </div>
+        {/* ----------------load button-------------------- */}
+        <div className="w-full flex justify-center my-6">
+          <button
+            onClick={loadMore}
+            disabled={loading}
+            className={`flex items-center gap-2 px-6 py-2 bg-pink-400 hover:bg-pink-500 text-black text-sm md:text-base font-medium rounded border border-yellow-500 transition duration-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 ${
+              loading ? "opacity-60 cursor-not-allowed" : ""
+            }`}
+          >
+            {loading && (
+              <svg
+                className="animate-spin h-4 w-4 text-black"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                ></path>
+              </svg>
+            )}
+            {loading ? "Loading..." : "Load More"}
+          </button>
+        </div>
       </div>
-
-   
     </div>
   );
 };

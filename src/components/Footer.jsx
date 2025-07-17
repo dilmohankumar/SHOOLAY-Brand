@@ -3,7 +3,9 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <div className="py-4 cursor-pointer hover:bg-[#80008226] bg-[#80008233] border border-gray-200 text-[oklch(0.4_0.21_268.29)] text-center flex items-center justify-center"
+      <div
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className="py-4 cursor-pointer hover:bg-[#80008226] bg-[#80008233] border border-gray-200 text-[oklch(0.4_0.21_268.29)] text-center flex items-center justify-center"
       >
         <h1>Back to Top</h1>
       </div>
